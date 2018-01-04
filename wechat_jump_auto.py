@@ -248,6 +248,8 @@ def main():
             debug.save_debug_screenshot(ts, im, piece_x, piece_y, board_x, board_y)
             debug.backup_screenshot(ts)
         i += 1
+        # 不休息，继续
+        next_rest = 0
         if i == next_rest:
             print('已经连续打了 {} 下，休息 {}s'.format(i, next_rest_time))
             for j in range(next_rest_time):
